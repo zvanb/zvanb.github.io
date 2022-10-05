@@ -1,0 +1,344 @@
+body {
+    margin:0;
+    padding:0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/*Css for header*/
+#header {
+    background-color:black;
+    width:100%;
+    height:100px;
+}
+
+li {
+    display:inline;
+    padding:10px;
+}
+
+#logo {
+    width:70px;
+    height:auto;
+    margin: 10px 0% 10px 4%;
+    float:left;
+}
+
+#nav-left, #nav-right {
+    color:white;
+    list-style:none;
+    margin:35px 0%;
+}
+
+#nav-left {
+    float: left;
+    width:fit-content;
+}
+
+#nav-right {
+    float:right;
+    width:fit-content;
+    margin-right:4%;
+}
+
+/*Css for large photo and title*/
+
+#large-image {
+    width:100%;
+    height:20%;
+    margin:0%;
+    background-image: url("../images/largeIMG2.jpg");
+    background-size: cover;
+}
+
+#title {
+    margin:0%;
+    padding:10%;
+    color:white;
+    font-size: 7vmax;
+    text-align:center;
+    text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+
+/*Css for articles*/
+#articles {
+    background-color: lightgray;
+    margin:0%;
+    height:auto;
+}
+
+#article1, #article2, #article3 {
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 70%;
+    border-radius: 5px;
+    margin:auto;
+    padding:20px;
+    overflow:auto;
+}
+  
+#article1:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+#article1IMG, #article2IMG, #article3IMG  {
+    width:50%;
+    height:auto;
+}
+
+#article1IMG, #article3IMG {
+    float:left;
+}
+
+#article2IMG {
+    float:right;
+}
+
+h2 {
+    float:left;
+    margin:0;
+    padding:1%;
+    font-size:2vmax;
+    width:47%;
+}
+
+#title-right {
+    float:right;
+}
+
+.articleTxt {
+    margin:0%;
+    font-size:1.5vmax;
+    padding:1%;
+}
+
+/*Css for statistics*/
+#stats {
+    background-color: gold;
+    height:auto;
+    text-align:center;
+    margin:auto;
+}
+
+#statistics {
+    margin:0%;
+    padding:15px;
+}
+
+#col1, #col2, #col3 {
+    background-color: gold;
+    width: 33.33333%;
+    float:left;
+}
+
+h3 {
+    margin:0%;
+    font-size:5vmax;
+    width:100%;
+}
+
+#title-left {
+    float:right;
+}
+
+.statDesc {
+    font-size:2vmax;
+    font-style:bold;
+    padding-bottom:15px;
+}
+
+/*Css for footer*/
+#footer {
+    background-color:black;
+    text-align:center;
+    height:auto;
+}
+
+.footerInfo {
+    color: white;
+    margin:0;
+}
+
+/*media queries*/
+@media screen and (min-width: 769px){
+    .hamburger{
+        display:none;
+    }    
+}
+
+@media screen and (max-width: 768px){
+     /*Css for hamburger from https://codepen.io/g13nn/pen/PoazKP*/
+     .hamburger{
+        background:none;
+        position:absolute;
+        top:0;
+        right:0;
+        line-height:85px;
+        padding:5px 15px 0px 15px;
+        color:#999;
+        border:0;
+        font-size:1.4em;
+        font-weight:bold;
+        cursor:pointer;
+        outline:none;
+        z-index:10000000000000;
+      }
+      .cross{
+        background:none;
+        position:absolute;
+        top:0px;
+        right:0;
+        padding:7px 15px 0px 15px;
+        color:#999;
+        border:0;
+        font-size:3em;
+        line-height:65px;
+        font-weight:bold;
+        cursor:pointer;
+        outline:none;
+        z-index:10000000000000;
+      }
+      .menu{z-index:1000000; font-weight:bold; font-size:0.8em; width:100%; background:#f1f1f1;  position:absolute; text-align:center; font-size:12px;}
+      .menu ul {margin: 0; padding: 0; list-style-type: none; list-style-image: none;}
+      .menu li {display: block;   padding:15px 0 15px 0; border-bottom:#dddddd 1px solid;}
+      .menu li:hover{display: block;    background:#ffffff; padding:15px 0 15px 0; border-bottom:#dddddd 1px solid;}
+      .menu ul li a { text-decoration:none;  margin: 0px; color:#666;}
+      .menu ul li a:hover {  color: #666; text-decoration:none;}
+      .menu a{text-decoration:none; color:#666;}
+      .menu a:hover{text-decoration:none; color:#666;}
+      
+      .glyphicon-home{
+        color:white; 
+        font-size:1.5em; 
+        margin-top:5px; 
+        margin:0 auto;
+      }
+}
+@media screen and (max-width: 768px) and (min-width: 577px){
+    #nav-left {
+        display:none;
+    }
+    
+    #nav-right {
+        display:none;
+    }
+    
+    #stats {
+        background-color: gold;
+        height:auto;
+        text-align:center;
+        margin:auto;
+        overflow:hidden;
+    }
+
+    #statistics {
+        margin:0%;
+        padding:15px;
+        font-size:3vmax;
+    }
+
+    h3 {
+        margin:0%;
+        font-size:2vmax;
+        width:100%;
+    }
+    
+    .statDesc {
+        font-size:1vmax;
+        font-style:bold;
+        padding-bottom:15px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #nav-left {
+        display:none;
+    }
+    
+    #nav-right {
+        display:none;
+    }
+    
+    #articles {
+        background-color: lightgray;
+        margin:0%;
+        height:auto;
+    }
+    
+    #article1, #article2, #article3 {
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        width: 80%;
+        border-radius: 5px;
+        margin:auto;
+        padding:2%;
+    }
+      
+    #article1:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+    
+    #article1IMG, #article2IMG, #article3IMG  {
+        width:100%;
+        height:auto;
+        text-align:center;
+    }
+    
+    h2 {
+        text-align:center;
+        margin:0;
+        padding:1%;
+        font-size:3vmax;
+        width:100%;
+    }
+    
+    #title-right {
+        float:right;
+    }
+    
+    #articleTxt {
+        margin:0%;
+        font-size:1.5vmax;
+        padding:1%;
+    }
+
+        /*Css for statistics*/
+    #stats {
+        background-color: gold;
+        height:auto;
+        text-align:center;
+        margin:auto;
+    }
+
+    #statistics {
+        margin:0%;
+        padding:15px;
+    }
+
+    #col1, #col2, #col3 {
+        background-color: gold;
+        width: 100%;
+        text-align:center;
+    }
+
+    h3 {
+        margin:0%;
+        font-size:5vmax;
+        width:100%;
+    }
+
+    #title-left {
+        float:right;
+    }
+
+    .statDesc {
+        font-size:2vmax;
+        font-style:bold;
+        padding-bottom:15px;
+    }
+}
